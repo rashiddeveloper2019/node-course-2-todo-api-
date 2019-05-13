@@ -67,7 +67,7 @@ app.get('/todos/:id',(req,res)=> {
          if(!todo) {
             return res.status(400).send({messgae:"Doc not present"});
         }
-        res.send(todo);
+        res.send({todo});
         }).catch((e) => {
             res.status(400).send();
         });
